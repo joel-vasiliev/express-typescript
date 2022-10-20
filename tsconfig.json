@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@config/*":["./src/config/*"],
+      "@modules/*":["./src/modules/*"],
+      "@shared/*":["./src/shared/*"],
+    },
+    "typeRoots": [
+      "./src/shared/http/@types",
+      "./node_modules/@types"
+    ]
+  }
+}
