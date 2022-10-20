@@ -1,16 +1,16 @@
 import ListUserService from "@modules/users/services/ListUserService";
 import { Router, Request, Response, NextFunction } from "express";
 
-// import { EnsureAuthenticated } from "@shared/middleware/ensureAuthenticated";
+import { EnsureAuthenticated } from "@shared/middleware/ensureAuthenticated";
 // import validate from "@shared/middleware/validate";
 
-// const authorizationUser = new EnsureAuthenticated();
+const authorizationUser = new EnsureAuthenticated();
 
 export const userRouter = Router();
 
 userRouter.get(
   "/",
-  //   authorizationUser.run,
+  authorizationUser.run,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       //   const { userId } = req.session.user.profile;
