@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    image: mysql:8.0.31
+    env_file:
+      - .env
+    ports:
+      - ${DBPORT:-3000}:${DBPORT:-3000}

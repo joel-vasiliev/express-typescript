@@ -1,14 +1,13 @@
+import { db } from "@/main";
+import { AppError } from "@shared/errors/AppError";
+
 export default class ListUserService {
   async run(): Promise<any> {
-    // const users = await User.find();
+    if (!db)
+      throw new AppError("Ocorreu um erro ao conectar no banco de dados");
+    const rows = await db.query(`SELECT * FROM users;`);
 
-    const users = [
-      {
-        name: "Joel",
-        age: 19,
-        job: "Developer",
-      },
-    ];
-    return users;
+    if (!rows) return [];
+    return rows[0];
   }
 }
