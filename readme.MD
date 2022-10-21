@@ -31,6 +31,9 @@
 [ ] - Criar rotas de busca a partir de banco de dados de admins
 [ ] - Criptografia em senha
 [X] - Adicionar tipo do produto (para agrupamento de produtos por categoria e listagem em rotas específicas da API)
+[ ] - Arrumar query user específico não retornando valor
+[ ] - Arrumar função calculo preço após entrar no rateio
+[ ] - Testar as rotas da API em diferentes fluxos para procurar bugs
 ```
 
 # Documentação básica das rotas
